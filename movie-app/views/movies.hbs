@@ -1,0 +1,12 @@
+<form action="/moviesearch" method="GET">
+	<label for="search">Search for a title</label>
+	<input type="text" id="search" name="q">
+	<button type="submit">Search</button>
+</form>
+{{#each movieList}}
+	{{!-- this is the syntax to use a partial --}}
+	{{!-- {{> *name of the partial* *the data you want to show*}} --}}
+	{{> movieCard this}}
+{{/each}}
+
+<a href="/about">Visit the about page</a>
